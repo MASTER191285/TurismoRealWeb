@@ -1,0 +1,15 @@
+﻿@{ Layout = "~/Views/Shared/_LayoutBase.cshtml"; }
+
+@section Header{
+    @Html.Partial("~/Views/Shared/_HeaderPartial.cshtml");
+}
+@section Footer{
+    @Html.Partial("~/Views/Shared/_FooterPartial.cshtml");
+}
+
+
+@RenderBody()
+
+@section Scripts{
+    @RenderSection("scripts", required: false)
+}

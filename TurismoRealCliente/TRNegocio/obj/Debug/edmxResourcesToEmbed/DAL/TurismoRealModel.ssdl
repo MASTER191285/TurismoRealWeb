@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurismoRealModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CL_ID" />
+    </Key>
+    <Property Name="CL_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CL_RUT" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_NOMBRE" Type="varchar2" MaxLength="200" Nullable="false" />
+    <Property Name="CL_APELLIDOP" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_APELLIDOM" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_FECHANAC" Type="date" Nullable="false" />
+    <Property Name="CL_EMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_FONO" Type="number" Precision="11" Scale="0" Nullable="false" />
+    <Property Name="CL_FECHA_REGISTRO" Type="date" Nullable="false" />
+    <Property Name="CL_CLAVE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="CL_ESTADO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CL_MULTAS" Type="number" Precision="38" Scale="0" />
+    <Property Name="CL_RESERVA" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="COMUNA">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="COM_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COM_NOMCOMUNA" Type="varchar2" MaxLength="100" Nullable="false" />
+    <Property Name="COM_IDREGION" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="IDEMPLEADO" />
+    </Key>
+    <Property Name="IDEMPLEADO" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NOMBRES" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CEDULA" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="EDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FUNCIONARIO">
+    <Key>
+      <PropertyRef Name="FUNC_ID" />
+    </Key>
+    <Property Name="FUNC_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FUNC_RUT" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FUNC_NOMBRE" Type="varchar2" MaxLength="200" Nullable="false" />
+    <Property Name="FUNC_APELLIDOP" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FUNC_APELLIDOM" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FUNC_FECHANAC" Type="date" Nullable="false" />
+    <Property Name="FUNC_EMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FUNC_FONO" Type="number" Precision="11" Scale="0" Nullable="false" />
+    <Property Name="FUNC_FECHA_INGRESO" Type="date" Nullable="false" />
+    <Property Name="FUNC_CLAVE" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="FUNC_IDROL" Type="number" Precision="38" Scale="0" />
+    <Property Name="FUNC_ESTADO" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRUEBA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="REGION">
+    <Key>
+      <PropertyRef Name="REG_ID" />
+    </Key>
+    <Property Name="REG_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="REG_NOMREGION" Type="varchar2" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ROL">
+    <Key>
+      <PropertyRef Name="ROL_ID" />
+    </Key>
+    <Property Name="ROL_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ROL_DESCRIPCION" Type="varchar2" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="SYS_C007520">
+    <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROL">
+        <PropertyRef Name="ROL_ID" />
+      </Principal>
+      <Dependent Role="FUNCIONARIO">
+        <PropertyRef Name="FUNC_IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C007544">
+    <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGION">
+        <PropertyRef Name="REG_ID" />
+      </Principal>
+      <Dependent Role="COMUNA">
+        <PropertyRef Name="COM_IDREGION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TurismoRealModelStoreContainer">
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="COMUNA" EntityType="Self.COMUNA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="PRUEBA" EntityType="Self.PRUEBA" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="REGION" EntityType="Self.REGION" Schema="PORTAFOLIO" store:Type="Tables" />
+    <EntitySet Name="ROL" EntityType="Self.ROL" Schema="PORTAFOLIO" store:Type="Tables" />
+    <AssociationSet Name="SYS_C007520" Association="Self.SYS_C007520">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C007544" Association="Self.SYS_C007544">
+      <End Role="REGION" EntitySet="REGION" />
+      <End Role="COMUNA" EntitySet="COMUNA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

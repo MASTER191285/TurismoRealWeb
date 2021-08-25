@@ -1,0 +1,8 @@
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.csproj.AssemblyReference.cache
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.AssemblyInfoInputs.cache
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.AssemblyInfo.cs
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.csproj.CoreCompileInputs.cache
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.RazorAssemblyInfo.cache
+C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TurismoRealCliente\obj\Debug\netcoreapp3.1\TurismoRealCliente.RazorAssemblyInfo.cs

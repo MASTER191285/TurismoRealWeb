@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurismoRealModelStoreContainer" CdmEntityContainer="TurismoRealEntities">
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="TurismoRealModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="CL_ID" ColumnName="CL_ID" />
+          <ScalarProperty Name="CL_RUT" ColumnName="CL_RUT" />
+          <ScalarProperty Name="CL_NOMBRE" ColumnName="CL_NOMBRE" />
+          <ScalarProperty Name="CL_APELLIDOP" ColumnName="CL_APELLIDOP" />
+          <ScalarProperty Name="CL_APELLIDOM" ColumnName="CL_APELLIDOM" />
+          <ScalarProperty Name="CL_FECHANAC" ColumnName="CL_FECHANAC" />
+          <ScalarProperty Name="CL_EMAIL" ColumnName="CL_EMAIL" />
+          <ScalarProperty Name="CL_FONO" ColumnName="CL_FONO" />
+          <ScalarProperty Name="CL_FECHA_REGISTRO" ColumnName="CL_FECHA_REGISTRO" />
+          <ScalarProperty Name="CL_CLAVE" ColumnName="CL_CLAVE" />
+          <ScalarProperty Name="CL_ESTADO" ColumnName="CL_ESTADO" />
+          <ScalarProperty Name="CL_MULTAS" ColumnName="CL_MULTAS" />
+          <ScalarProperty Name="CL_RESERVA" ColumnName="CL_RESERVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMUNA">
+      <EntityTypeMapping TypeName="TurismoRealModel.COMUNA">
+        <MappingFragment StoreEntitySet="COMUNA">
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_NOMCOMUNA" ColumnName="COM_NOMCOMUNA" />
+          <ScalarProperty Name="COM_IDREGION" ColumnName="COM_IDREGION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="TurismoRealModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="IDEMPLEADO" ColumnName="IDEMPLEADO" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONARIO">
+      <EntityTypeMapping TypeName="TurismoRealModel.FUNCIONARIO">
+        <MappingFragment StoreEntitySet="FUNCIONARIO">
+          <ScalarProperty Name="FUNC_ID" ColumnName="FUNC_ID" />
+          <ScalarProperty Name="FUNC_RUT" ColumnName="FUNC_RUT" />
+          <ScalarProperty Name="FUNC_NOMBRE" ColumnName="FUNC_NOMBRE" />
+          <ScalarProperty Name="FUNC_APELLIDOP" ColumnName="FUNC_APELLIDOP" />
+          <ScalarProperty Name="FUNC_APELLIDOM" ColumnName="FUNC_APELLIDOM" />
+          <ScalarProperty Name="FUNC_FECHANAC" ColumnName="FUNC_FECHANAC" />
+          <ScalarProperty Name="FUNC_EMAIL" ColumnName="FUNC_EMAIL" />
+          <ScalarProperty Name="FUNC_FONO" ColumnName="FUNC_FONO" />
+          <ScalarProperty Name="FUNC_FECHA_INGRESO" ColumnName="FUNC_FECHA_INGRESO" />
+          <ScalarProperty Name="FUNC_CLAVE" ColumnName="FUNC_CLAVE" />
+          <ScalarProperty Name="FUNC_IDROL" ColumnName="FUNC_IDROL" />
+          <ScalarProperty Name="FUNC_ESTADO" ColumnName="FUNC_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRUEBA">
+      <EntityTypeMapping TypeName="TurismoRealModel.PRUEBA">
+        <MappingFragment StoreEntitySet="PRUEBA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGION">
+      <EntityTypeMapping TypeName="TurismoRealModel.REGION">
+        <MappingFragment StoreEntitySet="REGION">
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_NOMREGION" ColumnName="REG_NOMREGION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="TurismoRealModel.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="ROL_ID" ColumnName="ROL_ID" />
+          <ScalarProperty Name="ROL_DESCRIPCION" ColumnName="ROL_DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
