@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTurismoReal.Web", "AppTu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTurismoReal.Web.Tests", "AppTurismoReal.Web.Tests\AppTurismoReal.Web.Tests.csproj", "{B5E711AC-F32F-46C3-8B13-71BA536CEE26}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cliente", "Cliente", "{7BF19752-ADEE-4FA2-AF5F-74CE4DFB46B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{EEBABCDE-7F90-415A-ACEB-FA593B8E4225}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5DF55DC2-9E1E-4DC8-A23D-D2E09F360754} = {B9B6E050-BEF2-4861-AC30-6F3AD90BE5D6}
+		{1A082630-F0F1-452C-BA7C-84755F05A9B1} = {7BF19752-ADEE-4FA2-AF5F-74CE4DFB46B7}
+		{B5E711AC-F32F-46C3-8B13-71BA536CEE26} = {EEBABCDE-7F90-415A-ACEB-FA593B8E4225}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4246A17-5506-41A9-AC26-0B180F4BD6CE}
