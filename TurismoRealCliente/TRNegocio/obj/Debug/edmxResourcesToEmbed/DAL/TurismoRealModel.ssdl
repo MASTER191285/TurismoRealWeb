@@ -11,7 +11,7 @@
     <Property Name="CL_APELLIDOM" Type="varchar2" MaxLength="50" Nullable="false" />
     <Property Name="CL_FECHANAC" Type="date" Nullable="false" />
     <Property Name="CL_EMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
-    <Property Name="CL_FONO" Type="number" Precision="11" Scale="0" Nullable="false" />
+    <Property Name="CL_FONO" Type="number" Precision="38" Scale="0" Nullable="false" />
     <Property Name="CL_FECHA_REGISTRO" Type="date" Nullable="false" />
     <Property Name="CL_CLAVE" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="CL_ESTADO" Type="char" MaxLength="1" Nullable="false" />

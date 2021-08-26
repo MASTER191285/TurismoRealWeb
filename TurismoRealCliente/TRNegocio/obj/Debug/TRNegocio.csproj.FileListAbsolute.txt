@@ -3,7 +3,6 @@ C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\bin\D
 C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\bin\Debug\TRNegocio.pdb
 C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\bin\Debug\EntityFramework.dll
 C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\bin\Debug\EntityFramework.xml
-C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\obj\Debug\TRNegocio.csproj.AssemblyReference.cache
 C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\obj\Debug\TRNegocio.csproj.CoreCompileInputs.cache
 C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\obj\Debug\TRNegocio.csproj.CopyComplete
 C:\Users\Yuri\Documents\GitHub\TurismoRealWeb\TurismoRealCliente\TRNegocio\obj\Debug\TRNegocio.dll
