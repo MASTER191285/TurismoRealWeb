@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurismoRealModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CL_ID" />
+    </Key>
+    <Property Name="CL_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CL_RUT" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_NOMBRE" Type="varchar2" MaxLength="200" Nullable="false" />
+    <Property Name="CL_APELLIDOP" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_APELLIDOM" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_FECHANAC" Type="date" Nullable="false" />
+    <Property Name="CL_EMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CL_FONO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CL_FECHA_REGISTRO" Type="date" Nullable="false" />
+    <Property Name="CL_CLAVE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="CL_ESTADO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CL_MULTAS" Type="number" Precision="38" Scale="0" />
+    <Property Name="CL_RESERVA" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="TurismoRealModelStoreContainer">
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="UPORTAFOLIO" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

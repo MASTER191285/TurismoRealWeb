@@ -25,9 +25,9 @@ namespace TRNegocio.Entities
         public int cl_fono { get; set; }
         public DateTime cl_fecha_registro { get; set; }
         public string cl_clave { get; set; }
-        public char cl_estado { get; set; }
+        public string cl_estado { get; set; }
         public int cl_multas { get; set; }
-        public char cl_reserva { get; set; }
+        public int cl_reserva { get; set; }
         #endregion
     }
 }

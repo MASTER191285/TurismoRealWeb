@@ -12,6 +12,6 @@ namespace TRNegocio.Services
         ClienteDto GetClienteByCredentials(ClienteDto p_filtro);
 
         BaseDto<ClienteDto> GetClienteByMail(ClienteDto p_filtro);
-       
+
     }
 }

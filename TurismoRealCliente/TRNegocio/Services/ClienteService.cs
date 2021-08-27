@@ -5,15 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace TRNegocio.Services
 {
     public class ClienteService : IClienteService
     {
         #region Propiedades Privadas
         private static ClienteService Instance = null;
-        private TRNegocio.DAL.TurismoRealEntities dbContext = null;
-        #endregion
+        private TRNegocio.DAL.TREntities dbContext = null;
 
         #region Singleton
         private ClienteService() { }
@@ -21,9 +19,11 @@ namespace TRNegocio.Services
         {
             if (ClienteService.Instance == null)
                 ClienteService.Instance = new ClienteService();
-            
+
             return ClienteService.Instance;
         }
+        #endregion
+
         #endregion
 
         #region Metodos Publicos
@@ -32,14 +32,14 @@ namespace TRNegocio.Services
             ClienteDto objResult = null;
             try
             {
-                using (this.dbContext = new TurismoRealEntities())
+                using (this.dbContext = new TREntities())
                 {
                     var clienteDB = (from u in this.dbContext.CLIENTE
                                      where u.CL_EMAIL == p_filtro.cl_email &&
                                            u.CL_CLAVE == p_filtro.cl_clave &&
                                            u.CL_ESTADO.Equals("1")
                                      select u).FirstOrDefault();
-                    
+
                     if (clienteDB != null)
                     {
                         objResult = new ClienteDto
@@ -54,7 +54,7 @@ namespace TRNegocio.Services
                             cl_fecha_registro = clienteDB.CL_FECHA_REGISTRO,
                             cl_estado = clienteDB.CL_ESTADO,
                             cl_multas = Convert.ToInt32(clienteDB.CL_MULTAS),
-                            cl_reserva = clienteDB.CL_RESERVA
+                            cl_reserva = Convert.ToInt32(clienteDB.CL_RESERVA)
 
 
                         };
@@ -74,6 +74,7 @@ namespace TRNegocio.Services
         {
             throw new NotImplementedException();
         }
-        #endregion
+
+        #endregion 
     }
 }

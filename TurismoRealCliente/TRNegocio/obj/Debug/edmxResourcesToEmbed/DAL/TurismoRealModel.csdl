@@ -1,86 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TurismoRealModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="CLIENTE">
-    <Key>
-      <PropertyRef Name="CL_ID" />
-    </Key>
-    <Property Name="CL_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="CL_RUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CL_NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CL_APELLIDOP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CL_APELLIDOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CL_FECHANAC" Type="DateTime" Nullable="false" />
-    <Property Name="CL_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CL_FONO" Type="Int64" Nullable="false" />
-    <Property Name="CL_FECHA_REGISTRO" Type="DateTime" Nullable="false" />
-    <Property Name="CL_CLAVE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CL_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="CL_MULTAS" Type="Decimal" Precision="38" Scale="0" />
-    <Property Name="CL_RESERVA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-  </EntityType>
+  <EntityContainer Name="TREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COMUNA" EntityType="TurismoRealModel.COMUNA" />
+    <EntitySet Name="FUNCIONARIO" EntityType="TurismoRealModel.FUNCIONARIO" />
+    <EntitySet Name="PRUEBA" EntityType="TurismoRealModel.PRUEBA" />
+    <EntitySet Name="REGION" EntityType="TurismoRealModel.REGION" />
+    <EntitySet Name="ROL" EntityType="TurismoRealModel.ROL" />
+    <AssociationSet Name="SYS_C007544" Association="TurismoRealModel.SYS_C007544">
+      <End Role="REGION" EntitySet="REGION" />
+      <End Role="COMUNA" EntitySet="COMUNA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C007520" Association="TurismoRealModel.SYS_C007520">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+    </AssociationSet>
+    <EntitySet Name="CLIENTE" EntityType="TurismoRealModel.CLIENTE" />
+  </EntityContainer>
   <EntityType Name="COMUNA">
     <Key>
       <PropertyRef Name="COM_ID" />
     </Key>
-    <Property Name="COM_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="COM_NOMCOMUNA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="COM_IDREGION" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <NavigationProperty Name="REGION" Relationship="Self.SYS_C007544" FromRole="COMUNA" ToRole="REGION" />
-  </EntityType>
-  <EntityType Name="EMPLEADO">
-    <Key>
-      <PropertyRef Name="IDEMPLEADO" />
-    </Key>
-    <Property Name="IDEMPLEADO" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDOS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CEDULA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COM_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="COM_NOMCOMUNA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COM_IDREGION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="REGION" Relationship="TurismoRealModel.SYS_C007544" FromRole="COMUNA" ToRole="REGION" />
   </EntityType>
   <EntityType Name="FUNCIONARIO">
     <Key>
       <PropertyRef Name="FUNC_ID" />
     </Key>
-    <Property Name="FUNC_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="FUNC_RUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FUNC_NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FUNC_APELLIDOP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FUNC_APELLIDOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FUNC_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FUNC_RUT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FUNC_NOMBRE" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FUNC_APELLIDOP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FUNC_APELLIDOM" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="FUNC_FECHANAC" Type="DateTime" Nullable="false" />
-    <Property Name="FUNC_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FUNC_EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="FUNC_FONO" Type="Int64" Nullable="false" />
     <Property Name="FUNC_FECHA_INGRESO" Type="DateTime" Nullable="false" />
-    <Property Name="FUNC_CLAVE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FUNC_CLAVE" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="FUNC_IDROL" Type="Decimal" Precision="38" Scale="0" />
-    <Property Name="FUNC_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="ROL" Relationship="Self.SYS_C007520" FromRole="FUNCIONARIO" ToRole="ROL" />
+    <Property Name="FUNC_ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="ROL" Relationship="TurismoRealModel.SYS_C007520" FromRole="FUNCIONARIO" ToRole="ROL" />
   </EntityType>
   <EntityType Name="PRUEBA">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
     <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="REGION">
     <Key>
       <PropertyRef Name="REG_ID" />
     </Key>
-    <Property Name="REG_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="REG_NOMREGION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="COMUNA" Relationship="Self.SYS_C007544" FromRole="REGION" ToRole="COMUNA" />
+    <Property Name="REG_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="REG_NOMREGION" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COMUNA" Relationship="TurismoRealModel.SYS_C007544" FromRole="REGION" ToRole="COMUNA" />
   </EntityType>
   <EntityType Name="ROL">
     <Key>
       <PropertyRef Name="ROL_ID" />
     </Key>
-    <Property Name="ROL_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="ROL_DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.SYS_C007520" FromRole="ROL" ToRole="FUNCIONARIO" />
+    <Property Name="ROL_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ROL_DESCRIPCION" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="TurismoRealModel.SYS_C007520" FromRole="ROL" ToRole="FUNCIONARIO" />
   </EntityType>
   <Association Name="SYS_C007544">
-    <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
-    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+    <End Type="TurismoRealModel.REGION" Role="REGION" Multiplicity="1" />
+    <End Type="TurismoRealModel.COMUNA" Role="COMUNA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="REGION">
         <PropertyRef Name="REG_ID" />
@@ -91,8 +79,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="SYS_C007520">
-    <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
-    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+    <End Type="TurismoRealModel.ROL" Role="ROL" Multiplicity="0..1" />
+    <End Type="TurismoRealModel.FUNCIONARIO" Role="FUNCIONARIO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ROL">
         <PropertyRef Name="ROL_ID" />
@@ -102,21 +90,22 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TurismoRealEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
-    <EntitySet Name="COMUNA" EntityType="Self.COMUNA" />
-    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
-    <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" />
-    <EntitySet Name="PRUEBA" EntityType="Self.PRUEBA" />
-    <EntitySet Name="REGION" EntityType="Self.REGION" />
-    <EntitySet Name="ROL" EntityType="Self.ROL" />
-    <AssociationSet Name="SYS_C007544" Association="Self.SYS_C007544">
-      <End Role="REGION" EntitySet="REGION" />
-      <End Role="COMUNA" EntitySet="COMUNA" />
-    </AssociationSet>
-    <AssociationSet Name="SYS_C007520" Association="Self.SYS_C007520">
-      <End Role="ROL" EntitySet="ROL" />
-      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
-    </AssociationSet>
-  </EntityContainer>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CL_ID" />
+    </Key>
+    <Property Name="CL_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CL_RUT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CL_NOMBRE" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CL_APELLIDOP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CL_APELLIDOM" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CL_FECHANAC" Type="DateTime" Nullable="false" />
+    <Property Name="CL_EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CL_FONO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CL_FECHA_REGISTRO" Type="DateTime" Nullable="false" />
+    <Property Name="CL_CLAVE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CL_ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CL_MULTAS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CL_RESERVA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
 </Schema>

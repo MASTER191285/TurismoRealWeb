@@ -1,0 +1,9 @@
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\bin\x64\Debug\TRNegocio.dll.config
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\bin\x64\Debug\TRNegocio.dll
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\bin\x64\Debug\TRNegocio.pdb
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\bin\x64\Debug\EntityFramework.dll
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\bin\x64\Debug\EntityFramework.xml
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\obj\x64\Debug\TRNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\obj\x64\Debug\TRNegocio.csproj.CopyComplete
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\obj\x64\Debug\TRNegocio.dll
+C:\Users\ylopezv\source\repos\TurismoRealWeb-main\TurismoRealWeb-main\TurismoRealCliente\TRNegocio\obj\x64\Debug\TRNegocio.pdb

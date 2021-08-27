@@ -21,7 +21,7 @@ namespace TRNegocio.DAL
         public string CL_APELLIDOM { get; set; }
         public System.DateTime CL_FECHANAC { get; set; }
         public string CL_EMAIL { get; set; }
-        public long CL_FONO { get; set; }
+        public decimal CL_FONO { get; set; }
         public System.DateTime CL_FECHA_REGISTRO { get; set; }
         public string CL_CLAVE { get; set; }
         public string CL_ESTADO { get; set; }

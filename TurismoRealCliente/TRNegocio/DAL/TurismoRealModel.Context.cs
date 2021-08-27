@@ -13,10 +13,10 @@ namespace TRNegocio.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TurismoRealEntities : DbContext
+    public partial class TREntities : DbContext
     {
-        public TurismoRealEntities()
-            : base("name=TurismoRealEntities")
+        public TREntities()
+            : base("name=TREntities")
         {
         }
     
@@ -25,12 +25,11 @@ namespace TRNegocio.DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<CLIENTE> CLIENTE { get; set; }
         public DbSet<COMUNA> COMUNA { get; set; }
-        public DbSet<EMPLEADO> EMPLEADO { get; set; }
         public DbSet<FUNCIONARIO> FUNCIONARIO { get; set; }
         public DbSet<PRUEBA> PRUEBA { get; set; }
         public DbSet<REGION> REGION { get; set; }
         public DbSet<ROL> ROL { get; set; }
+        public DbSet<CLIENTE> CLIENTE { get; set; }
     }
 }

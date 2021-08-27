@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurismoRealModelStoreContainer" CdmEntityContainer="TREntities">
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="TurismoRealModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="CL_ID" ColumnName="CL_ID" />
+          <ScalarProperty Name="CL_RUT" ColumnName="CL_RUT" />
+          <ScalarProperty Name="CL_NOMBRE" ColumnName="CL_NOMBRE" />
+          <ScalarProperty Name="CL_APELLIDOP" ColumnName="CL_APELLIDOP" />
+          <ScalarProperty Name="CL_APELLIDOM" ColumnName="CL_APELLIDOM" />
+          <ScalarProperty Name="CL_FECHANAC" ColumnName="CL_FECHANAC" />
+          <ScalarProperty Name="CL_EMAIL" ColumnName="CL_EMAIL" />
+          <ScalarProperty Name="CL_FONO" ColumnName="CL_FONO" />
+          <ScalarProperty Name="CL_FECHA_REGISTRO" ColumnName="CL_FECHA_REGISTRO" />
+          <ScalarProperty Name="CL_CLAVE" ColumnName="CL_CLAVE" />
+          <ScalarProperty Name="CL_ESTADO" ColumnName="CL_ESTADO" />
+          <ScalarProperty Name="CL_MULTAS" ColumnName="CL_MULTAS" />
+          <ScalarProperty Name="CL_RESERVA" ColumnName="CL_RESERVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

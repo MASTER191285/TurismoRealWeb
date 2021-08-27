@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TurismoRealModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="TurismoRealModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="CLIENTE">
     <Key>
       <PropertyRef Name="CL_ID" />
@@ -11,7 +11,7 @@
     <Property Name="CL_APELLIDOM" Type="varchar2" MaxLength="50" Nullable="false" />
     <Property Name="CL_FECHANAC" Type="date" Nullable="false" />
     <Property Name="CL_EMAIL" Type="varchar2" MaxLength="50" Nullable="false" />
-    <Property Name="CL_FONO" Type="number" Precision="11" Scale="0" Nullable="false" />
+    <Property Name="CL_FONO" Type="number" Precision="38" Scale="0" Nullable="false" />
     <Property Name="CL_FECHA_REGISTRO" Type="date" Nullable="false" />
     <Property Name="CL_CLAVE" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="CL_ESTADO" Type="char" MaxLength="1" Nullable="false" />
@@ -25,16 +25,6 @@
     <Property Name="COM_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
     <Property Name="COM_NOMCOMUNA" Type="varchar2" MaxLength="100" Nullable="false" />
     <Property Name="COM_IDREGION" Type="number" Precision="38" Scale="0" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EMPLEADO">
-    <Key>
-      <PropertyRef Name="IDEMPLEADO" />
-    </Key>
-    <Property Name="IDEMPLEADO" Type="number" Precision="10" Scale="0" Nullable="false" />
-    <Property Name="NOMBRES" Type="varchar2" MaxLength="50" Nullable="false" />
-    <Property Name="APELLIDOS" Type="varchar2" MaxLength="50" Nullable="false" />
-    <Property Name="CEDULA" Type="varchar2" MaxLength="10" Nullable="false" />
-    <Property Name="EDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
   </EntityType>
   <EntityType Name="FUNCIONARIO">
     <Key>
@@ -101,7 +91,6 @@
   <EntityContainer Name="TurismoRealModelStoreContainer">
     <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="PORTAFOLIO" store:Type="Tables" />
     <EntitySet Name="COMUNA" EntityType="Self.COMUNA" Schema="PORTAFOLIO" store:Type="Tables" />
-    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="PORTAFOLIO" store:Type="Tables" />
     <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" Schema="PORTAFOLIO" store:Type="Tables" />
     <EntitySet Name="PRUEBA" EntityType="Self.PRUEBA" Schema="PORTAFOLIO" store:Type="Tables" />
     <EntitySet Name="REGION" EntityType="Self.REGION" Schema="PORTAFOLIO" store:Type="Tables" />
