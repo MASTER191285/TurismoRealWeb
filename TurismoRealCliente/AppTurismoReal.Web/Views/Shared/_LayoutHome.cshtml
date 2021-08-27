@@ -1,10 +1,17 @@
-﻿@{ Layout = "~/Views/Shared/_LayoutBase.cshtml"; }
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+@*@section Banner{
+    @Html.Partial("~/Views/Shared/_BannerPartial.cshtml")
+}*@
 
 @section Header{
-    @Html.Partial("~/Views/Shared/_HeaderPartial.cshtml");
+    @Html.Partial("~/Views/Shared/_HeaderPartial.cshtml")
 }
+
 @section Footer{
-    @Html.Partial("~/Views/Shared/_FooterPartial.cshtml");
+    @Html.Partial("~/Views/Shared/_FooterPartial.cshtml")
 }
 
 

@@ -44,6 +44,14 @@ namespace AppTurismoReal.Web.Controllers
             return View();
         }
 
+        
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(AccountViewModel p_ViewModel)
         {

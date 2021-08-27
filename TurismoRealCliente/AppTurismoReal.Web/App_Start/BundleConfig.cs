@@ -20,6 +20,7 @@ namespace AppTurismoReal.Web
                       "~/Content/css/flexslider.css",
                       "~/Content/css/galleryeffect.css",
                       "~/Content/css/owl.carousel.css",
+                      "~/Content/css/login.css",
                       "~/Content/css/style.css"));           
         }
     }

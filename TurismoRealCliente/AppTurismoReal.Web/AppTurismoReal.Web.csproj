@@ -179,6 +179,11 @@
     <Content Include="Content\css\owl.carousel.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\images\ba1.jpg" />
+    <Content Include="Content\images\ba2.jpg" />
+    <Content Include="Content\images\ba3.jpg" />
+    <Content Include="Content\images\banner.jpg" />
+    <Content Include="Content\images\banner1.jpg" />
     <Content Include="Content\images\bannner\ba1.jpg" />
     <Content Include="Content\images\bannner\ba2.jpg" />
     <Content Include="Content\images\bannner\ba3.jpg" />
@@ -193,6 +198,7 @@
     <Content Include="Content\images\ga6.jpg" />
     <Content Include="Content\images\ga7.jpg" />
     <Content Include="Content\images\img-sprite.png" />
+    <Content Include="Content\images\logo_turismoReal.png" />
     <Content Include="Content\images\p.jpg" />
     <Content Include="Content\images\p1.jpg" />
     <Content Include="Content\images\p2.jpg" />
@@ -224,6 +230,11 @@
     <Content Include="Content\images\details\w3.jpg" />
     <Content Include="Content\images\details\w4.jpg" />
     <Content Include="Content\images\details\w5.jpg" />
+    <Content Include="Content\images\w1.jpg" />
+    <Content Include="Content\images\w2.jpg" />
+    <Content Include="Content\images\w3.jpg" />
+    <Content Include="Content\images\w4.jpg" />
+    <Content Include="Content\images\w5.jpg" />
     <Content Include="Content\w3layouts-License.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -267,7 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -285,6 +295,11 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Shared\_HeaderPartial.cshtml" />
+    <Content Include="Views\Shared\_FooterPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_BannerPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TRNegocio\TRNegocio.csproj">

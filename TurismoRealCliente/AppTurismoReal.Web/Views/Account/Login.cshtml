@@ -1,0 +1,45 @@
+﻿@{
+    @model AppTurismoReal.Web.Models.AccountViewModel
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+        <div class="card login-card">
+            <div class="row no-gutters">
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <div class="brand-wrapper">
+                            <img src="~/Content/images/logo_turismoReal.png" alt="logo" class="logo">
+                        </div>
+                        <p class="login-card-description">Iniciar Sesión</p>                        
+                        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                        {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                @Html.TextBoxFor(model => model.CL_Email, htmlAttributes: new { @class = "form-control", @placeholder = "Email", @type = "email", @name = "email" })                        
+                                @Html.ValidationMessageFor(model => model.CL_Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="password" class="sr-only">Password</label>
+                                @Html.EditorFor(model => model.CL_Clave, new { htmlAttributes = new { @class = "form-control", type = "password", placeholder = "Contraseña" } })
+                                @Html.ValidationMessageFor(model => model.CL_Clave, "", new { @class = "text-danger" })
+                            </div>
+                            <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Login">
+                        }                        
+                        <a href="#!" class="forgot-password-link">Olvidó su Contraseña?</a>
+                        <p class="login-card-footer-text">Sin cuenta? <a href="#!" class="text-reset">Registrese Aqui</a></p>
+                        <nav class="login-card-footer-nav">
+                            <a href="#!">Terminos de uso.</a>
+                            <a href="#!">Politica de Privacidad</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
